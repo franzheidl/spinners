@@ -78,7 +78,7 @@ For adjusting the border, you may use any valid shorthand css border declaration
 
 	
 	.my-spinner {
-		@include spinner(border-width: 3px);	
+		@include spinner(border-width 3px, border-style solid);	
 	}
 	
 #### Adjusting animation speed
