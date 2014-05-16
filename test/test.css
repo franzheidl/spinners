@@ -204,7 +204,7 @@ Full config w/ shorthand border declaration:
 }
 
 */
-.my-custom-spinner {
+.my-custom-spinner-shorthand {
   background-color: transparent;
   border: 2px dotted #456789;
   border-radius: 50%;
@@ -230,13 +230,13 @@ Full config w/ shorthand border declaration:
 Full config w/ individual border statements:
 
 .my-custom-spinner {
-  @include spinner(1.3rem, border-width 5px, border-style dotted, border-color #456789, .7s);
+  @include spinner(1.3rem, border-width 5px, border-style dashed, border-color rgba(0, 0, 0, .5), .7s);
 }
 
 */
 .my-custom-spinner {
   background-color: transparent;
-  border: 5px dotted #456789;
+  border: 5px dashed rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   border-top-color: transparent;
   border-right-color: transparent;

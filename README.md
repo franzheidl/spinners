@@ -10,7 +10,7 @@ Works with plain Sass or [Compass](http://compass-style.org).
 ##Install
 
 ### Download
-To use Spinners without any package manager and without Compass, the only file you'll need is `stylesheets/_spinner.scss`. Place this in the appropriate `sass` folder of your project, import it into your main .scss file or -module you deem fit, and you're good to go:
+To use Spinners straightaway without any package manager, the only file you'll need is `stylesheets/_spinner.scss`. Place this in the appropriate `sass` folder of your project, import it into your main .scss file or -module you deem fit, and you're good to go:
 
     @import "spinners";
 
