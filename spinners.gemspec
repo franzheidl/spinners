@@ -30,5 +30,5 @@ Gem::Specification.new do |s|
 
   # Gems Dependencies
   s.add_dependency("sass",      ["~> 3.2"])
-  s.add_dependency("compass",   ["~> 0.12.2"])
+  s.add_dependency("compass",   ["~> 1.0.0.alpha"])
 end
