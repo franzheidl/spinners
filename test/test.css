@@ -1,0 +1,257 @@
+/*
+================================================================================
+SPINNER
+================================================================================
+A Sass mixin to generate a pure CSS3 loading/busy indicator.
+https://github.com/franzheidl/spinner
+Franz Heidl 2014
+MIT License
+--------------------------------------------------------------------------------
+USAGE
+
+Default:
+
+.my-spinner {
+ @include spinner();
+}
+
+
+Custom:
+
+.my-spinner {
+ @include spinner(1.25em, 3px solid #555, .7s);
+}
+
+All arguments are optional.
+
+Acceppts any valid CSS dimensional declaration, e.g px, em, rem as an argument for size.
+
+Use either shorthand border declarations or individual 'border-[property] [value]' (no colon!) pairs for the style.
+
+Pass any number of seconds referring to the duration of one full rotation for animation speed.
+
+--------------------------------------------------------------------------------
+*/
+@-webkit-keyframes spinner-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner-animation {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spinner-animation {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner-animation {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  100% {
+    -o-transform: rotate(100deg);
+  }
+}
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Default:
+
+.my-spinner {
+  @include spinner();
+}
+
+*/
+.my-spinner {
+  background-color: transparent;
+  border: 3px solid #4285f4;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-animation: spinner-animation 0.65s infinite linear;
+  -moz-animation: spinner-animation 0.65s infinite linear;
+  -o-animation: spinner-animation 0.65s infinite linear;
+  -ms-animation: spinner-animation 0.65s infinite linear;
+  animation: spinner-animation 0.65s infinite linear;
+}
+
+/*
+Border-width:
+
+.my-fat-spinner {
+  @include spinner(border-width 12px);
+}
+
+*/
+.my-fat-spinner {
+  background-color: transparent;
+  border: 12px solid #4285f4;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-animation: spinner-animation 0.65s infinite linear;
+  -moz-animation: spinner-animation 0.65s infinite linear;
+  -o-animation: spinner-animation 0.65s infinite linear;
+  -ms-animation: spinner-animation 0.65s infinite linear;
+  animation: spinner-animation 0.65s infinite linear;
+}
+
+/*
+Color:
+
+.my-blue-spinner {
+  @include spinner(border-color blue);
+}
+
+*/
+.my-blue-spinner {
+  background-color: transparent;
+  border: 3px solid blue;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-animation: spinner-animation 0.65s infinite linear;
+  -moz-animation: spinner-animation 0.65s infinite linear;
+  -o-animation: spinner-animation 0.65s infinite linear;
+  -ms-animation: spinner-animation 0.65s infinite linear;
+  animation: spinner-animation 0.65s infinite linear;
+}
+
+/*
+Duration/Speed:
+
+.my-fast-spinner {
+  @include spinner(.4s);
+}
+
+*/
+.my-fast-spinner {
+  background-color: transparent;
+  border: 3px solid #4285f4;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-animation: spinner-animation 0.4s infinite linear;
+  -moz-animation: spinner-animation 0.4s infinite linear;
+  -o-animation: spinner-animation 0.4s infinite linear;
+  -ms-animation: spinner-animation 0.4s infinite linear;
+  animation: spinner-animation 0.4s infinite linear;
+}
+
+/*
+Full config w/ shorthand border declaration:
+
+.my-custom-spinner {
+  @include spinner(23px, 2px dotted #456789, .5s);
+}
+
+*/
+.my-custom-spinner {
+  background-color: transparent;
+  border: 2px dotted #456789;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-animation: spinner-animation 0.5s infinite linear;
+  -moz-animation: spinner-animation 0.5s infinite linear;
+  -o-animation: spinner-animation 0.5s infinite linear;
+  -ms-animation: spinner-animation 0.5s infinite linear;
+  animation: spinner-animation 0.5s infinite linear;
+}
+
+/*
+Full config w/ individual border statements:
+
+.my-custom-spinner {
+  @include spinner(1.3rem, border-width 5px, border-style dotted, border-color #456789, .7s);
+}
+
+*/
+.my-custom-spinner {
+  background-color: transparent;
+  border: 5px dotted #456789;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-animation: spinner-animation 0.7s infinite linear;
+  -moz-animation: spinner-animation 0.7s infinite linear;
+  -o-animation: spinner-animation 0.7s infinite linear;
+  -ms-animation: spinner-animation 0.7s infinite linear;
+  animation: spinner-animation 0.7s infinite linear;
+}
