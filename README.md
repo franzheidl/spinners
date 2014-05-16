@@ -1,3 +1,6 @@
+<style>body{color:red}</style>
+
+
 #spinner
 
 
