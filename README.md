@@ -1,5 +1,7 @@
 #spinner
 
+[![Gem Version](https://badge.fury.io/rb/spinners.svg)](http://badge.fury.io/rb/spinners)
+
 
 A Sass mixin to generate pure CSS3 loading/busy indicators.
 Uses a single rotating element and a partial border.
