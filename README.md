@@ -94,7 +94,7 @@ All arguments are optional. When using mulitple customizations, pass your argume
 		@include spinner(28px, 3px solid #555, .7s);
 	}
 	
-In case of invalid arguments, compilation will not fail but Spinner will output a warning and use its defaults.
+In case of invalid arguments compilation will not fail, but Spinner will output a warning and use its defaults.
 
 
 
