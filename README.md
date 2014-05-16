@@ -69,7 +69,7 @@ By default, Spinners are set to be `1em` wide and high, so a spinner will size p
 	}
 
 #### Adjusting border (width, style and thickness)	
-For adjusting the border, you may use any valid shorthand css border declaration or individual `border-{property}: {value}` pairs:
+For adjusting the border, you may use any valid shorthand css border declaration or individual `border-{property} {value}` (no colon!) pairs:
 
 	.my-spinner {
 		@include spinner(3px solid #ccc);
