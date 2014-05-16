@@ -1,6 +1,6 @@
 {
   "name": "spinner",
   "version": "1.0.0",
-  "main": "spinner.scss",
+  "main": "spinners.scss",
   "author": "Franz Heidl",
 }

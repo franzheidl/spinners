@@ -1,4 +1,4 @@
-require './lib/spinner'
+require './lib/spinners'
 
 Gem::Specification.new do |s|
   # Release Specific Information
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.description = %q{A Sass mixin and Compass extension to generate a pure CSS3 loading/busy indicator}
   s.summary = %q{Uses a single rotating element and a partial border. Fully customizable.}
   s.authors = ["Franz Heidl"]
-  s.homepage = "https://github.com/franzheidl/spinner"
+  s.homepage = "https://github.com/franzheidl/spinners"
 
   # LICENSE file
   s.licenses = ['MIT']

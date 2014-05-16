@@ -1,7 +1,7 @@
 #spinner
 
 
-A Sass mixin to generate a pure CSS3 loading/busy indicator.
+A Sass mixin to generate pure CSS3 loading/busy indicators.
 Uses a single rotating element and a partial border.
 Fully customizable.
 Works with plain Sass or [Compass](http://compass-style.org).
@@ -10,26 +10,26 @@ Works with plain Sass or [Compass](http://compass-style.org).
 ##Install
 
 ### Download
-To use Spinner without any package manager and without Compass, the only file you'll need is `stylesheets/_spinner.scss`. Place this in the appropriate `sass` folder of your project, import it into your main .scss file or -module you deem fit, and you're good to go:
+To use Spinners without any package manager and without Compass, the only file you'll need is `stylesheets/_spinner.scss`. Place this in the appropriate `sass` folder of your project, import it into your main .scss file or -module you deem fit, and you're good to go:
 
-    @import "spinner";
+    @import "spinners";
 
 
 ### Bower
 To install in your current project using bower run:
 
-    bower install --save-dev spinner
+    bower install --save-dev spinners
 
 
 ### Compass Extension
 
 To install the Compass extension as a Ruby Gem:
 
-    gem install spinner
+    gem install spinners
     
 and require it in your `config.rb`:
 
-    require 'spinner'
+    require 'spinners'
 
 
 Spinners is also on [Sache](http://www.sache.in/).
@@ -38,7 +38,7 @@ Spinners is also on [Sache](http://www.sache.in/).
 
 First, import Spinner into your main .scss file or -module:
 
-	@import "spinner";
+	@import "spinners";
 
 Then declare a selector of your choice and call the mixin:
 
@@ -49,7 +49,7 @@ Then declare a selector of your choice and call the mixin:
 In your html, you can use any markup element you want, a `div`, `span`, `i`, or what have you.
 
 
-Spinner comes set to `display: inline-block` and `vertical-align: middle` by default so you can put it inside buttons, alerts and the like and have it aligned. If this doesn't work for you, declare you overrides ***after*** calling the mixin:
+Spinners come set to `display: inline-block` and `vertical-align: middle` by default so you can put it inside buttons, alerts and the like and have it aligned. If this doesn't work for you, declare you overrides ***after*** calling the mixin:
 
 	.my-spinner {
     	@include spinner();
@@ -57,12 +57,12 @@ Spinner comes set to `display: inline-block` and `vertical-align: middle` by def
        	margin-right: .5em;
     }
 
-### Customizing Spinner
+### Customizing Spinners
 Size, border-width, -style, -color, and the speed of the animation can be customized. 
 
 
 #### Adjusting Size
-By default, Spinner is set to be `1em` wide and high, so it will size proportionally to its context. To customize its size, you may use any valid dimensional unit such as `px`, `em`, or `rem`:
+By default, Spinners are set to be `1em` wide and high, so a spinner will size proportionally to its context. To customize its size, you may use any valid dimensional unit such as `px`, `em`, or `rem`:
 
 	.my-spinner {
 		@include spinner(1.25em);
@@ -82,7 +82,7 @@ For adjusting the border, you may use any valid shorthand css border declaration
 	}
 	
 #### Adjusting animation speed
-To customize Spinner's animation speed, pass the number of seconds for one ull rotation:
+To customize a spinner's animation speed, pass the number of seconds for one full rotation:
 
 	.my-spinner {
 		@include spinner(.6s);
