@@ -94,14 +94,14 @@ All arguments are optional. When using mulitple customizations, pass your argume
 		@include spinner(28px, 3px solid #555, .7s);
 	}
 	
-In case of invalid arguments compilation will not fail, but Spinner will output a warning and use its defaults.
+In case of invalid arguments compilation will not fail, but Spinners will output a warning and use its defaults.
 
 
 
 
 ## Compatibility
 Works in any modern browser and IE 10+.
-Spinner does not come with a fallback for IE < 10, so if you need one, roll your own!
+Spinners does not come with a fallback for IE < 10, so if you need one, roll your own!
 
 
 The MIT License (MIT)
