@@ -7,8 +7,7 @@ Gem::Specification.new do |s|
 
   # Gem Details
   s.name = "spinners"
-  # s.rubyforge_project = "spinner"
-  s.description = %q{A Sass mixin and Compass extension to generate a pure CSS3 loading/busy indicator}
+  s.description = %q{A Sass mixin and Compass extension to generate pure CSS3 loading/busy indicators}
   s.summary = %q{Uses a single rotating element and a partial border. Fully customizable.}
   s.authors = ["Franz Heidl"]
   s.homepage = "https://github.com/franzheidl/spinners"
@@ -31,5 +30,5 @@ Gem::Specification.new do |s|
 
   # Gems Dependencies
   s.add_dependency("sass",      ["~> 3.2"])
-  s.add_dependency("compass",   ["~> 1.0.0.alpha"])
+  s.add_dependency("compass",   ["~> 0.12.2"])
 end

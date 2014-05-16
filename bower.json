@@ -1,6 +1,7 @@
 {
-  "name": "spinner",
+  "name": "spinners",
   "version": "1.0.0",
   "main": "spinners.scss",
   "author": "Franz Heidl",
+  "ignore": ["*", "!stylesheets/_spinners.scss"]
 }
