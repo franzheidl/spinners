@@ -1,5 +1,5 @@
 {
   "name": "spinners",
   "description": "A Sass mixin to generate pure CSS3 loading/busy indicators",
-  "tags": ["ui", "spinner", "loading", "busy", "indicator"]
+  "tags": ["sass", "compass", "ui", "spinner", "loading", "busy", "indicator"]
 }
