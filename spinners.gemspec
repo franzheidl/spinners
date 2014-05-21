@@ -2,8 +2,8 @@ require './lib/spinners'
 
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = ModernizrMixin::VERSION
-  s.date = ModernizrMixin::DATE
+  s.version = Spinners::VERSION
+  s.date = Spinners::DATE
 
   # Gem Details
   s.name = "spinners"
