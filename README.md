@@ -51,7 +51,7 @@ Then declare a selector of your choice and call the mixin:
 In your html, you can use any markup element you want, a `div`, `span`, `i`, or what have you.
 
 
-Spinners come set to `display: inline-block` and `vertical-align: middle` by default so you can put it inside buttons, alerts and the like and have it aligned. If this doesn't work for you, declare you overrides ***after*** calling the mixin:
+Spinners come set to `display: inline-block` and `vertical-align: middle` by default so you can put it inside buttons, alerts and the like and have it aligned. If this doesn't work for you, declare your overrides ***after*** calling the mixin:
 
 	.my-spinner {
     	@include spinner();
