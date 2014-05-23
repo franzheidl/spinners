@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width" initial-scale="1.0"><title>Spinners</title><link rel="stylesheet" href="css/application.css" type="text/css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" type="text/css"></head><body><header role="banner" class="hero"><div class="container"><h1><div class="spinner-hero"></div><span class="hero-h1-textcontent">Spinners</span></h1><h2>A Sass mixin to generate pure CSS3 loading/busy indicators</h2><p class="center">Uses a single rotating element and a partial border. Fully customizable. <br>Use with pure Sass or Compass.</p><ul class="sources-list"><li><a href="https://github.com/franzheidl/spinners" class="sources-link">Spinners on Github</a></li><li><a href="https://rubygems.org/gems/spinners" class="sources-link">Spinners on Rubygems.org</a></li></ul></div></header><section class="section"><div class="container"><h2>Installing Spinners</h2><section class="section"><h3>Download</h3><p>The easiest way to use Spinners is to just clone the repo from <a href='https://github.com/franzheidl/spinners'>github</a> or download the <a href='https://github.com/franzheidl/spinners/releases'>latest release tarball</a>. The only file you'll need is <code>stylesheets/_spinner.scss</code>. Place this in the appropriate <code>sass</code> folder of your project.</p></section><section class="section"><h3>Install via Bower</h3><p>To install Spinners as a Bower component run:</p><pre><code>$ bower install spinners</code></pre></section><section class="section"><h3>Compass Extension Ruby Gem</h3><p>To install Spinners as a Compass extension run:</p><pre><code>$ gem install spinners</code></pre><p>and require it in your <code>config.rb</code> file:</p><pre><code>$ require 'spinners'</code></pre></section></div></section><section class="section"><div class="container"><h2>Getting Started</h2><p>First, import Spinner into your main .scss file or -module:</p><pre><code>@import "spinners";</code></pre><p>Then declare a selector of your choice and call the mixin:</p><pre><code>.my-spinner {
+  @include spinner();
+}</code></pre><p>In your html, you can use any markup element you want, a <code>div</code>, <code>span</code>, <code>i</code>, or what have you.</p><p>Spinners come set to <code>display: inline-block</code> and <code>vertical-align: middle</code> by default so you can put it inside buttons, alerts and the like and have it aligned. If this doesn't work for you, declare your overrides <strong>after</strong> calling the mixin:</p><pre><code>.my-spinner {
+  @include spinner();
+  vertical-align: top;
+  margin-right: .5em;
+}</code></pre></div></section><section class="section"><div class="container"><h2>Customizing Spinners</h2><p>Size, border-width, -style, -color, and the speed of the animation can be customized.</p><section class="section"><h3>Adjusting Size</h3><p>By default, Spinners are set to be <code>1em</code> wide and high, so a spinner will size proportionally to its context. To customize its size, you may use any valid dimensional unit such as <code>px</code>, <code>em</code>, or <code>rem</code>:</p><pre><code>.my-spinner {
+  @include spinner(1.25em);
+}</code></pre></section><section class="section"><h3>Adjusting border-width, -style, and -thickness</h3><p>For adjusting the border, you may use any valid shorthand css border declaration or individual <code>border-{property} {value}</code> (no colon!) pairs:</p><pre><code>.my-spinner {
+  @include spinner(3px solid #ccc);
+}
+  &nbsp;
+.my-spinner {
+  @include spinner(border-width 3px, border-style solid);
+}</code></pre></section><section class="section"><h3>Adjusting Animation Speed</h3><p>To customize a spinner's animation speed, pass the number of seconds for one full rotation:</p><pre><code>.my-spinner {
+    @include spinner(.6s);
+}</code></pre><p>All arguments are optional. When using mulitple customizations, pass your arguments comma-separated:</p><pre><code>.my-spinner {
+    @include spinner(28px, 3px solid #555, .7s);
+}</code></pre><p>In case of invalid arguments compilation will not fail, but Spinners will output a warning and use its defaults.</p></section></div></section><section class="section"><div class="container"><h2>Examples</h2><div class="example"><div class="example-spinner"><div class="my-spinner-default"></div>Default Spinner</div><pre><code>.my-spinner {
+  @include spinner();
+}</code></pre></div><div class="example"><div class="example-spinner"><div class="my-big-fat-spinner"></div>Big Fat Spinner</div><pre><code>.my-big-fat-spinner {
+  @include spinner(1.5em, border-width 12px);
+}</code></pre></div><section class="section"><div class="example-spinner"><div class="my-orange-dotted-spinner"></div>Orange Dotted Spinner</div><pre><code>.my-orange-dotted-spinner {
+  @include spinner(2em, 6px dotted orange);
+}</code></pre></section><section class="section"><div class="example-spinner"><div class="my-dashed-spinner"></div>Dashed Spinner</div><pre><code>.my-dashed-spinner {
+  @include spinner(1.2em, border-style dashed);
+}</code></pre></section><section class="section"><div class="example-spinner"><div class="my-double-spinner"></div>Double Spinner</div><pre><code>.my-double-spinner {
+  @include spinner(6px double fuchsia);
+}</code></pre></section><section class="section"><div class="example-spinner"><div class="my-fast-spinner"></div>Fast Spinner</div><pre><code>.my-fast-spinner {
+  @include spinner(.3s, border-width 4px, border-color #aaa);
+}</code></pre></section><section class="section"><div class="example-spinner"><div class="my-slow-spinner"></div>Slow Spinner</div><pre><code>.my-slow-spinner {
+  @include spinner(4s);
+}</code></pre></section></div></section><section class="section"><div class="container"><h2>Compatibility</h2><p>Works in any modern browser and IE 10+. Spinners does not come with a fallback for IE < 10, so if you need one, roll your own!</p></div></section><footer role="pagefooter" class="pagefooter"><div class="container center">&copy; Franz Heidl 2014. MIT Licensed. Made with <a href='http://gruntjs.com'>Grunt</a>, <a href='http://compass-style.org'>Compass</a>, and <a href='http://jade-lang.com'>Jade</a>.</div></footer></body></html>
