@@ -1,0 +1,9 @@
+*.gem
+
+/.sass-cache/
+
+/config.rb
+
+/Gemfile.lock
+
+/stylesheets/test.scss
