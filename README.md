@@ -1,4 +1,4 @@
-#spinner
+#Spinners
 
 [![Bower version](https://badge.fury.io/bo/spinners.svg)](http://badge.fury.io/bo/spinners) [![Gem Version](https://badge.fury.io/rb/spinners.svg)](http://badge.fury.io/rb/spinners)
 
