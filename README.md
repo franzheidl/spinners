@@ -22,14 +22,14 @@ To use Spinners straightaway without any package manager, the only file you'll n
 ### Bower
 To install in your current project using bower run:
 
-    bower install --save-dev spinners
+    $ bower install --save-dev spinners
 
 
 ### Compass Extension
 
 To install the Compass extension as a Ruby Gem:
 
-    gem install spinners
+    $ gem install spinners
     
 and require it in your `config.rb`:
 
