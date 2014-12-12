@@ -1,9 +1,9 @@
 /*
 ================================================================================
-SPINNER
+SPINNERS
 ================================================================================
 A Sass mixin to generate a pure CSS3 loading/busy indicator.
-https://github.com/franzheidl/spinner
+https://github.com/franzheidl/spinners
 Franz Heidl 2014
 MIT License
 --------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Default:
 Custom:
 
 .my-spinner {
- @include spinner(1.25em, 3px solid #555, .7s);
+ @include spinner(1.25em, 3px solid #555, .7s, background rgba(0, 0, 0, .2);
 }
 
 All arguments are optional.
@@ -91,9 +91,10 @@ Pass any number of seconds referring to the duration of one full rotation for an
   $size: 1em;
   $border-width: 3px;
   $border-style: solid;
-  $border-color: #4285f4;
+  $border-color: #1277c2;
   $border: $border-width $border-style $border-color;
   $duration: .65s;
+  $background: transparent; //
   
   // Parse arguments:
   @if $args {
@@ -145,6 +146,14 @@ Pass any number of seconds referring to the duration of one full rotation for an
             }
           }
         }
+        @else if $prop == 'background' {
+          @if type-of($val) == color {
+            $background: $val;
+          }
+          @else {
+            @warn "Spinner: \"#{nth($val)}\" is not a valid color for background! Using default \"transparent\".";
+          }
+        }
         @else {
           @warn "Spinner: \"#{nth($arg, 1)}\" is not a valid border property! Using default border.";
         }
@@ -166,8 +175,8 @@ Pass any number of seconds referring to the duration of one full rotation for an
   background-color: transparent;
   border: $border;
   border-radius: 50%;
-  border-top-color: transparent;
-  border-right-color: transparent;
+  border-top-color: $background;
+  border-right-color: $background;
   width: $size;
   height: $size;
   display: inline-block;
