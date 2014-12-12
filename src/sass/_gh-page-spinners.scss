@@ -1,0 +1,38 @@
+.spinner-hero {
+  // @include spinner(border-color #fff,border-width 8px, background rgba(0, 0, 0, .2));
+  @include spinner(border-color #fff,border-width 8px, background $theme-color-extra-dark);
+  margin-top: -10px;
+  margin-right: .3em;
+}
+
+.my-spinner-default {
+  @include spinner();
+}
+
+.my-big-fat-spinner {
+  @include spinner(2em, border-width 12px);
+}
+
+.my-orange-dotted-spinner {
+  @include spinner(1.5em, 6px dotted orange);
+}
+
+.my-dashed-spinner {
+  @include spinner(1em, border-style dashed);
+}
+
+.my-double-spinner {
+  @include spinner(6px double fuchsia);
+}
+
+.my-fast-spinner {
+  @include spinner(.3s, border-width 4px, border-color #aaa);
+}
+
+.my-slow-spinner {
+  @include spinner(3s);
+}
+
+.my-background-spinner {
+  @include spinner(background rgba(0, 0, 0, .2));
+}

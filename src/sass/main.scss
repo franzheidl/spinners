@@ -1,0 +1,253 @@
+@import "compass";
+@import "compass/reset";
+@import "variables";
+@import "mixins/rems";
+@import "mixins/breakpoint";
+@import "../../stylesheets/spinners";
+@import "gh-page-spinners";
+
+
+body {
+  color: #303030;
+  background-color: rgb(252, 252, 252);
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  @include rems(font-size, 17px);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  word-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+strong {
+  font-weight: 900;
+}
+
+
+section {
+  @include rems(margin-bottom, 64px);
+  section {
+    @include rems(margin-bottom, 24px);
+  }
+}
+
+code {
+  @include border-radius(3px);
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
+  font-size: .75em;
+  @include rems(padding, 1px 6px);
+}
+
+pre {
+  @include border-radius(3px);
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  @include rems(padding, 8px 12px);
+  overflow-x: auto;
+  code {
+    border: none;
+    padding: 0;
+  }
+}
+
+a {
+  color: $theme-color;
+}
+
+h2,
+h3 {
+  font-weight: 900;
+}
+
+h2 {
+  @include rems(font-size, 30px);
+  @include rems(margin, 54px 0 10px 0);
+  color: $theme-color-dark;
+}
+
+h3 {
+  @include rems(font-size, 22px);
+  @include rems(margin, 36px 0 10px 0);
+}
+
+p,
+pre,
+ul,
+ol {
+  @include rems(margin-bottom, 24px);
+}
+
+header {
+  background-color: $theme-color-dark;
+  color: #fff;
+  @include rems(padding, 20px 0);
+  .spinner-hero {
+    margin-left: -1.3em;
+    @include breakpoint(px, max-width $content-max-width +  220px) {
+      margin-left: 0;
+    }
+  }
+  h1 {
+    @include rems(font-size, 84px);
+    @include rems(margin-bottom, 12px);
+    font-weight: 700;
+  }
+}
+
+
+.dark {
+  background-color: $theme-color-dark;
+  color: #fff;
+  pre {
+    border-color: 1px solid $theme-color-extra-dark;
+    color: #333;
+  }
+}
+
+footer {
+  background-color: $theme-color-dark;
+  color: #fff;
+  @include rems(font-size, 13px);
+  @include rems(padding, 12px 0 18px 0);
+}
+
+.header-sub {
+  font-weight: 700;
+  @include rems(margin-bottom, 32px);
+  li {
+    @include rems(margin-bottom, 8px);
+  }
+}
+
+.header-links {
+  @include pie-clearfix();
+  @include rems(margin-bottom, 12px);
+  li {
+    @include rems(margin-bottom, 12px);
+    @include rems(margin-right, 12px);
+    float: left;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  a {
+    @include border-radius(5px);
+    @include rems(padding, 6px 16px);
+    background-color: $theme-color-extra-dark;
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      background-color: darken($theme-color-extra-dark, 5);
+    }
+    &:active {
+      background-color: #fff;
+      color: $theme-color-extra-dark;
+    }
+  }
+}
+
+.container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+}
+
+
+.example {
+  @include rems(margin-bottom, 36px);
+  .example-spinner {
+    @include border-top-left-radius(3px);
+    @include border-top-right-radius(3px);
+    @include rems(padding, 28px 12px);
+    @include rems(font-size, 24px);
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    line-height: 1;
+    text-align: center;
+  }
+  pre {
+    @include border-top-left-radius(0);
+    @include border-top-right-radius(0);
+    @include border-bottom-left-radius(3px);
+    @include border-bottom-right-radius(3px);
+  }
+}
+
+h2 + .example {
+  @include rems(margin-top, 34px);
+}
+
+.link-list {
+  @include rems(margin-bottom, 34px);
+  li {
+    @include rems(margin-bottom, 10px);
+  }
+  a {
+    font-weight: 900;
+  }
+}
+
+
+@include breakpoint(px, max-width 500px) {
+  .header-links {
+    li {
+      width: 100%;
+    }
+    a {
+      @include rems(font-size, 18px);
+      display: block;
+    }
+  }
+}
+
+@include breakpoint(px, max-width 550px) {
+  .spinner-hero {
+    margin-right: 0;
+  }
+  h1 {
+    span {
+      display: block;
+    }
+  }
+  
+  
+}
+
+@include breakpoint(px, max-width $content-max-width +  220px) {
+   .spinner-hero {
+     margin-left: 0;
+   }
+   header {
+     text-align: center;
+   }
+   .header-links {
+     text-align: center;
+     li {
+       display: inline-block;
+       float: none;
+     }
+   }
+   .link-list {
+     li {
+       text-align: center;
+     }
+   }
+   .top-link {
+     text-align: center;
+   }
+}
+
+
+@include breakpoint(px, max-width $content-max-width +  2 * $mobile-padding) {
+  
+  .container {
+    @include rems(padding, 0 20px);
+  }
+    
+}

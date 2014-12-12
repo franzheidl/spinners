@@ -1,0 +1,260 @@
+doctype html
+
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width', initial-scale='1.0')
+    title Spinners
+    link(rel='icon', href='favicon.ico', type="image/x-icon")
+    link(rel='stylesheet', href='main.css', type='text/css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:400,700,900', type='text/css')
+    
+  body
+  
+    header
+      .container(role='banner')
+        h1
+          .spinner-hero
+          span Spinners
+        
+        ul.header-sub
+          li A Sass mixin to generate pure CSS3 loading/busy indicators.
+          li Fully customizable.
+          li Use with pure Sass or Compass.
+            
+        ul.header-links
+          li
+            a(href='https://github.com/franzheidl/spinners') Spinners on Github
+          li
+            a(href='https://rubygems.org/gems/spinners') Spinners on RubyGems.org
+          li
+            a(href='https://github.com/franzheidl/spinners/releases/latest') Download Spinners
+    
+    main
+      
+      section
+        .container
+          h2 Installing Spinners
+          
+          p Spinners can be installed as a <a href="https://rubygems.org/gems/spinners">Ruby Gem</a>, via <a href="http://bower.io/search/?q=spinners">Bower</a>, or simply via <a href="https://github.com/franzheidl/spinners/releases/latest">download</a>.
+          
+          h3 Ruby Gem
+          
+          p To install, simply run:
+          
+          pre
+            code
+              | $ gem install spinners
+              
+          p Then require spinners in your projects <code>config.rb</code>:
+          
+          pre
+            code
+              | require 'spinners'
+              
+          p Alernatively, when using <strong>Bundler</strong> and/or <strong>Rails</strong>, include spinners in your <code>Gemfile</code>:
+          
+          pre
+            code
+              | gem 'spinners'
+              
+          p and run <code>bundle install</code>.
+          
+          p The Spinners gem will be installed as a <strong>Compass extension</strong> if you have <strong>Compass</strong> on your system.
+          
+          p If you're using <strong>Grunt</strong> or <strong>Gulp</strong> with <strong>grunt-contrib-sass</strong>, <strong>grunt-contrib-compass</strong>, or <strong>gulp-compass</strong> without a <code>config.rb</code> file and have the Ruby Gem installed, you can add Spinners as a dependency to your configuration object.
+          
+          pre
+            code
+             |compass: {  // or sass
+             |  compile: {
+             |    options: {
+             |      require: 'spinners'
+             |    }
+             |   }
+             | }
+          
+          p If you're using <strong>grunt-sass</strong>, which runs on libsass, you won't be able to use the ruby gem. Use Spinners with Bower, or install manually.
+          
+          h3 Installing Spinners with Bower
+          
+          p To install Spinners as a Bower component run:
+          
+          pre
+            code $ bower install spinners
+          
+          h3 Installing Spinners Manually
+          
+          p Just clone the repo from <a href='https://github.com/franzheidl/spinners'>github</a> or download the <a href='https://github.com/franzheidl/spinners/releases'>latest release tarball</a>. The only file you'll need is <code>stylesheets/_spinners.scss</code>. Place this in the appropriate <code>sass</code> folder of your project.
+        
+      section
+        .container
+          h2 Using Spinners
+          
+          h3 Getting started
+          
+          p Import Spinners into your main .scss file or -module first. Then call the `spinner` mixin in a selector of your choice.
+          
+          pre
+            code
+              | .my-spinner {
+              |   @include spinner();
+              | }
+              
+          h3 Customizing Spinners
+          
+          p Size, border-width, -style, -color, and the speed of the animation can be customized.
+          
+          section.section
+            h3 Adjusting Size
+          
+            p By default, Spinners are set to be <code>1em</code> wide and high, so a spinner will size proportionally to its context. To customize its size, you may use any valid dimensional unit such as <code>px</code>, <code>em</code>, or <code>rem</code>:
+          
+            pre
+              code
+                | .my-spinner {
+                |   @include spinner(1.25em);
+                | }
+          
+          section.section
+            h3 Adjusting border-width, -style, and -thickness
+          
+            p For adjusting the border, you may use any valid shorthand css border declaration or individual <code>border-{property} {value}</code> (no colon!) pairs:
+          
+            pre
+              code
+                | .my-spinner {
+                |   @include spinner(3px solid #ccc);
+                | }
+                |   &nbsp;
+                | .my-spinner {
+                |   @include spinner(border-width 3px, border-style solid);
+                | }
+          
+          section.section
+            h3 Adjusting Animation Speed
+          
+            p To customize a spinner's animation speed, pass the number of seconds for one full rotation:
+          
+            pre
+              code
+                | .my-spinner {
+                |     @include spinner(.6s);
+                | }
+          
+          section
+            h3 Adjusting Background
+            
+            p The background, i.e. the perceived non-rotating part of a spinner, is set to be transparent by default. To adjust the background, pass a color as background argument:
+            
+            pre
+              code
+                | .my-spinner {
+                |     @include spinner(background rgba(0, 0, 0, .2));
+                | }
+                
+                
+          section
+            h3 How Spinners handles Arguments
+          
+            p All arguments are optional. When using mulitple customizations, pass your arguments comma-separated:
+            
+            pre
+              code
+                | .my-spinner {
+                |     @include spinner(28px, 3px solid #555, .7s);
+                | }
+            
+            p In case of invalid arguments compilation will not fail, but Spinners will output a warning and use its defaults.
+          
+          
+      section
+        .container
+          h2 Examples
+          
+          .example
+            .example-spinner
+              i.my-spinner-default
+            pre
+              code
+                |.my-spinner {
+                |  @include spinner();
+                |}
+                
+          .example
+            .example-spinner
+              i.my-big-fat-spinner
+            pre
+              code
+                |.my-big-fat-spinner {
+                |  @include spinner(2em, border-width 12px);
+                |}
+                
+          .example
+            .example-spinner
+              i.my-background-spinner
+            pre
+              code
+                |.my-background-spinner {
+                |  @include spinner(background rgba(0, 0, 0, .2));
+                |}
+                
+          .example
+            .example-spinner
+              i.my-orange-dotted-spinner
+            pre
+              code
+                |.my-orange-dotted-spinner {
+                |  @include spinner(1.5em, 6px dotted orange);
+                |}
+                
+          .example
+            .example-spinner
+              i.my-dashed-spinner
+            pre
+              code
+                |.my-dashed-spinner {
+                |  @include spinner(1.1em, border-style dashed);
+                |}
+                
+          .example
+            .example-spinner
+              i.my-double-spinner
+            pre
+              code
+                |.my-double-spinner {
+                |  @include spinner(6px double fuchsia);
+                |}
+                
+          .example
+            .example-spinner
+              i.my-fast-spinner
+            pre
+              code
+                |.my-fast-spinner {
+                |  @include spinner(.3s, border-width 4px, border-color #aaa);
+                |}
+                
+          .example
+            .example-spinner
+              i.my-slow-spinner
+            pre
+              code
+                |.my-slow-spinner {
+                |  @include spinner(3s);
+                |}
+                  
+      section
+        .container
+          ul.link-list
+            li
+              a(href='https://github.com/franzheidl/spinners') Spinners on Github
+            li
+              a(href='https://rubygems.org/gems/spinners') Spinners on RubyGems.org
+      
+          p.top-link
+            a(href='#') Top
+      
+    footer
+      .container
+        | &copy; Franz Heidl 2014. MIT Licensed.

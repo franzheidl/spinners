@@ -1,0 +1,41 @@
+/*
+--------------------------------------------------------------------------
+REMS MIXIN
+--------------------------------------------------------------------------
+Mixin to calculate rem-values.
+Requires a $font-size-base to be set earlier in the import chain.
+Franz Heidl, 2014.
+MIT License.
+
+*/
+
+@mixin rems($property, $px) {
+
+  // create array from $px if it isn't one:
+  @if type-of($px) is not list {
+    $px: ($px);
+  }
+
+  // create empty array for rems:
+  $rems: ();
+
+  // get values from user input $px, process if numerical and move them over to $rems:
+  @each $p in $px {
+    $r: $p;
+
+    // only process numerical values, leave strings etc. alone
+    @if type-of($p) == number {
+      // check for unitless values like '0' and add px unit for calculation
+      @if unitless($p) {
+        $p: $p * 1px;
+      }
+      $r: ($p / $font-size-base * 1rem);
+    }
+
+    $rems: append($rems, $r);
+  }
+
+  #{$property}: $px;
+  #{$property}: $rems;
+
+}

@@ -1,0 +1,98 @@
+/*
+--------------------------------------------------------------------------
+BREAKPOINT MIXIN
+--------------------------------------------------------------------------
+Mixin to generate breakpoint based media-queries.
+Franz Heidl, 2014.
+MIT License.
+
+
+Takes arguments for:
+
+targetUnit: the unit to appear in the media query. (e.g. 'px'. Values passed with other units will be converted to this targetUnit. Can be used to convert px-breakpoints to rem-based ones). Conversion to rems depends on global $base-fontsize variable.
+
+Property: the porperty to use for the media query (e.g. 'max-width')
+
+Value: the base value for the property. Will be converted to targetUnit.
+
+
+Example usage:
+
+@include breakpoint(px, min-width 500px) {
+  .my-element {
+    width: 80%
+  }
+}
+
+will become:
+
+@media only screen and (min-width: 500px) {
+  .my-element {
+    width: 80%
+  }
+}
+
+// TODO: allow combination of media AND breakpoints
+
+*/
+
+
+
+
+// @include breakpoint(rem, max-width 300px);
+
+
+@mixin breakpoint($args...) {
+  $targetUnit: px; // default to px
+  $validUnits: px em rem; // valid dimensional units to build breakpoints from
+  $property: false;
+  $value: false;
+
+
+  // Parse arguments:
+  @if $args {
+    @each $arg in $args {
+      @if length($arg) == 1 {
+        @if isIn($validUnits, $arg) {
+          $targetUnit: $arg;
+        }
+      }
+      @else if length($arg) == 2 {
+        $property: nth($arg, 1);
+        $value: nth($arg, 2);
+      }
+    }
+  }
+
+  // TODO: only convert if target unit is different from unit of $value!
+  $value: convert($value, $targetUnit);
+
+  // Write media-query:
+  @media only screen and (#{$property}: #{$value}) {
+    @content;
+  }
+
+}
+
+
+@function convert($src, $trgt) {
+  @if unit($src) != $trgt {
+    // 350px / 14px = 25, 25 * 1rem = 25rem;
+    @return ($src / $base-fontsize * 1#{$trgt});
+    //@return ($src / 16px * 1#{$trgt}); // use this for straight rem conversion without modified base font-size
+  }
+  @else {
+    @return $src;
+  }
+}
+
+
+@function isIn($arr1, $val) {
+  $hasVal: false;
+  @each $item in $arr1 {
+    @if $item == $val {
+      $hasVal: true;
+    }
+  }
+  @return $hasVal;
+}
