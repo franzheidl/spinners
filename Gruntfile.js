@@ -54,7 +54,7 @@ module.exports = function(grunt) {
       options: {
         base: './'
       },
-      src: ['index.html', 'main.css', 'main.js', 'favicon.ico']
+      src: ['index.html', 'main.css', 'favicon.ico']
     }
   
   });

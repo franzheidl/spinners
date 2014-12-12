@@ -1,7 +1,7 @@
 {
   "name": "spinners",
-  "version": "1.0.3",
-  "main": "spinners.scss",
+  "version": "1.1.0",
+  "main": "stylesheets/_spinners.scss",
   "author": "Franz Heidl",
-  "ignore": ["*", "!stylesheets/_spinners.scss"]
+  "ignore": ["*", "!stylesheets/_spinners.scss", "!README.md"]
 }

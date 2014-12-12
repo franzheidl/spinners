@@ -1,7 +1,8 @@
 require './lib/spinners'
 
 Gem::Specification.new do |s|
-  # Release Specific Information
+  
+  # Release Info
   s.version = Spinners::VERSION
   s.date = Spinners::DATE
 
@@ -11,11 +12,9 @@ Gem::Specification.new do |s|
   s.summary = %q{Uses a single rotating element and a partial border. Fully customizable.}
   s.authors = ["Franz Heidl"]
   s.homepage = "https://github.com/franzheidl/spinners"
-
-  # LICENSE file
   s.licenses = ['MIT']
 
-  # README file
+  # Readme file
   s.files = ["README.md"]
 
   # Library Files
@@ -30,5 +29,5 @@ Gem::Specification.new do |s|
 
   # Gems Dependencies
   s.add_dependency("sass",      ["~> 3.2"])
-  s.add_dependency("compass",   ["~> 1.0.0.alpha"])
+  
 end
