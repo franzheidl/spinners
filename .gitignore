@@ -2,8 +2,10 @@
 
 /.sass-cache/
 
-/config.rb
+node_modules
+
+.grunt
 
 /Gemfile.lock
 
-/stylesheets/test.scss
+
