@@ -1,6 +1,7 @@
-#Spinners
+# Spinners
 
 [![Bower version](https://badge.fury.io/bo/spinners.svg)](http://badge.fury.io/bo/spinners) [![Gem Version](https://badge.fury.io/rb/spinners.svg)](http://badge.fury.io/rb/spinners)
+
 
 
 A Sass mixin to generate pure CSS3 loading/busy indicators.
@@ -8,8 +9,13 @@ Uses a single rotating element and a partial border.
 Fully customizable.
 Works with plain Sass or [Compass](http://compass-style.org).
 
-[Spinners gh-page](http://franzheidl.github.io/spinners/)
+*** [Spinners Demo & Documentation](http://franzheidl.github.io/spinners/)***
 
+*** New with v1.1.0 ***
+
+* Spinners does not require Compass anymore (but will be installed as a Compass extension if you already have Compass installed)
+
+* Spinners can now have a background
 
 ##Install
 
@@ -25,7 +31,7 @@ To install in your current project using bower run:
     $ bower install --save-dev spinners
 
 
-### Compass Extension
+### Ruby Gem / Compass Extension
 
 To install the Compass extension as a Ruby Gem:
 
@@ -34,6 +40,41 @@ To install the Compass extension as a Ruby Gem:
 and require it in your `config.rb`:
 
     require 'spinners'
+    
+If you're using Grunt or Gulp with grunt-contrib-sass or grunt-contrib-compass without a `config.rb` file and have the Ruby Gem installed, you can add Spinners as a dependency to your configuration object:
+
+With grunt-contrib-sass:
+ 
+    sass: {
+      [...]
+      options: {
+        require: 'spinners'
+      }
+    }
+
+
+With grunt-contrib-compass:
+
+    compass: {
+      compile: {
+        options: {
+          [...]
+          require: 'spinners'     
+        }
+      }
+    }
+
+
+With gulp:
+
+      [...]
+        .pipe(compass({
+          [...]
+          require: 'spinners'
+        }))
+      [...]
+
+  
 
 
 Spinners is also on [Sache](http://www.sache.in/).
@@ -53,7 +94,7 @@ Then declare a selector of your choice and call the mixin:
 In your html, you can use any markup element you want, a `div`, `span`, `i`, or what have you.
 
 
-Spinners come set to `display: inline-block` and `vertical-align: middle` by default so you can put it inside buttons, alerts and the like and have it aligned. If this doesn't work for you, declare your overrides ***after*** calling the mixin:
+Spinners come set to `display: inline-block` and `vertical-align: middle` by default so you can put it inside buttons, alerts and the like and have it aligned. If the defaults don't work for you, declare your overrides ***after*** calling the mixin:
 
 	.my-spinner {
     	@include spinner();
@@ -92,6 +133,14 @@ To customize a spinner's animation speed, pass the number of seconds for one ful
 		@include spinner(.6s);
 	}
 	
+	
+#### Adjusting the Background
+The background, i.e. the perceived non-rotating part of a spinner, is set to be transparent by default. To adjust the background, pass a color as background argument:
+
+    .my-spinner {
+      @include spinner(background rgba(0, 0, 0, .2));
+    }
+	
 All arguments are optional. When using mulitple customizations, pass your arguments comma-separated:
 
 	.my-spinner {
@@ -106,6 +155,9 @@ In case of invalid arguments compilation will not fail, but Spinners will output
 ## Compatibility
 Works in any modern browser and IE 10+.
 Spinners does not come with a fallback for IE < 10, so if you need one, roll your own!
+
+
+
 
 
 The MIT License (MIT)
