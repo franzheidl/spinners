@@ -4,12 +4,20 @@
 
 
 
+
 A Sass mixin to generate pure CSS3 loading/busy indicators.
 Uses a single rotating element and a partial border.
 Fully customizable.
 Works with plain Sass or [Compass](http://compass-style.org).
 
 ***[Spinners Demo & Documentation](http://franzheidl.github.io/spinners/)***
+
+*** New with v1.2.0***
+
+* Spinners can be installed via NPM, including support for [eyeglass](https://github.com/sass-eyeglass/eyeglass)
+
+* eyeglass support
+
 
 ***New with v1.1.0***
 
@@ -29,6 +37,11 @@ To use Spinners straightaway without any package manager, the only file you'll n
 To install in your current project using bower run:
 
     $ bower install --save-dev spinners
+    
+### NPM
+When installed via NPM, spinners can be used with [eyeglass](https://github.com/sass-eyeglass/eyeglass). To install spinners with NPM run:
+
+    $ npm install --save-dev spinners
 
 
 ### Ruby Gem / Compass Extension
@@ -81,7 +94,7 @@ Spinners is also on [Sache](http://www.sache.in/).
 
 ##Usage
 
-First, import Spinner into your main .scss file or -module:
+First, import Spinner into your main .scss file or -module (depending on your installation method the import path might need to be adjusted accordingly):
 
 	@import "spinners";
 
