@@ -12,7 +12,7 @@ Uses a single rotating element and a partial border.
 Fully customizable.
 Works with plain Sass or [Compass](http://compass-style.org).
 
-***[Spinners Demo & Documentation](http://franzheidl.github.io/spinners/)***
+*** [Spinners Demo & Documentation](http://franzheidl.github.io/spinners/) ***
 
 *** New with v1.2.0***
 
