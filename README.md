@@ -18,8 +18,6 @@ Works with plain Sass or [Compass](http://compass-style.org).
 
 * Spinners can be installed via NPM, including support for [eyeglass](https://github.com/sass-eyeglass/eyeglass)
 
-* eyeglass support
-
 
 ***New with v1.1.0***
 
