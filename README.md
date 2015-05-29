@@ -1,11 +1,13 @@
 # Spinners
 
-[![Bower version](https://badge.fury.io/bo/spinners.svg)](http://badge.fury.io/bo/spinners) [![Gem Version](https://badge.fury.io/rb/spinners.svg)](http://badge.fury.io/rb/spinners)
+[![Bower version](https://badge.fury.io/bo/spinners.svg)](http://badge.fury.io/bo/spinners) 
+[![Gem Version](https://badge.fury.io/rb/spinners.svg)](http://badge.fury.io/rb/spinners)
+[![npm version](https://badge.fury.io/js/spinners.svg)](http://badge.fury.io/js/spinners)
 
 
 
 
-A Sass mixin to generate pure CSS3 loading/busy indicators.
+A Sass mixin to generate pure CSS3 loading indicators.
 Uses a single rotating element and a partial border.
 Fully customizable.
 Works with plain Sass or [Compass](http://compass-style.org).
