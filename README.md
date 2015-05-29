@@ -12,9 +12,9 @@ Uses a single rotating element and a partial border.
 Fully customizable.
 Works with plain Sass or [Compass](http://compass-style.org).
 
-*** [Spinners Demo & Documentation](http://franzheidl.github.io/spinners/) ***
+***[Spinners Demo & Documentation](http://franzheidl.github.io/spinners/)***
 
-*** New with v1.2.0***
+***New with v1.2.0***
 
 * Spinners can be installed via NPM, including support for [eyeglass](https://github.com/sass-eyeglass/eyeglass)
 
