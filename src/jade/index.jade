@@ -24,11 +24,14 @@ html(lang='en')
             
         ul.header-links
           li
-            a(href='https://github.com/franzheidl/spinners') Spinners on Github
+            a(href='https://github.com/franzheidl/spinners') Github
           li
-            a(href='https://rubygems.org/gems/spinners') Spinners on RubyGems.org
+            a(href='https://rubygems.org/gems/spinners') RubyGems.org
           li
-            a(href='https://github.com/franzheidl/spinners/releases/latest') Download Spinners
+            a(href='https://www.npmjs.com/package/spinners') NPM
+          li
+            a(href='https://github.com/franzheidl/spinners/releases/latest') Download
+          
     
     main
       
@@ -36,7 +39,7 @@ html(lang='en')
         .container
           h2 Installing Spinners
           
-          p Spinners can be installed as a <a href="https://rubygems.org/gems/spinners">Ruby Gem</a>, via <a href="http://bower.io/search/?q=spinners">Bower</a>, or simply via <a href="https://github.com/franzheidl/spinners/releases/latest">download</a>.
+          p Spinners can be installed as a <a href="https://rubygems.org/gems/spinners">Ruby Gem</a>, <a href="https://www.npmjs.com/package/spinners">NPM module</a>, via <a href="http://bower.io/search/?q=spinners">Bower</a>, or simply via <a href="https://github.com/franzheidl/spinners/releases/latest">download</a>.
           
           h3 Ruby Gem
           
@@ -74,7 +77,17 @@ html(lang='en')
              |   }
              | }
           
-          p If you're using <strong>grunt-sass</strong>, which runs on libsass, you won't be able to use the ruby gem. Use Spinners with Bower, or install manually.
+          p If you're using <strong>grunt-sass</strong>, which runs on libsass, you won't be able to use the ruby gem. Use Spinners with NPM, Bower, or install manually.
+          
+          h3 Installing with NPM
+          
+          p To install spinners with NPM run:
+          
+          pre
+            code $ npm install --save-dev spinners
+            
+          p When installed via NPM, spinners supports <a href="https://github.com/sass-eyeglass/eyeglass">eyeglass</a>.
+          
           
           h3 Installing Spinners with Bower
           
@@ -251,6 +264,8 @@ html(lang='en')
               a(href='https://github.com/franzheidl/spinners') Spinners on Github
             li
               a(href='https://rubygems.org/gems/spinners') Spinners on RubyGems.org
+            li
+              a(href='https://www.npmjs.com/package/spinners') Spinners on NPM
       
           p.top-link
             a(href='#') Top
